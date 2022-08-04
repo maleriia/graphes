@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphs</title>
+    <!-- CSS only -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.21.1/cytoscape.min.js"
+        integrity="sha512-H44mkyNG9R5Y8NDjFoZ0lnMGgxfsbfbuewUNJJjecVOUzR3n/JL8+UFc07pP74T5tA+aGOMKCwazdDYwoquE8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"
+        integrity="sha256-cHVO4dqZfamRhWD7s4iXyaXWVK10odD+qp4xidFzqTI=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://static.eurovision.tv/dist/assets/images/esc/2022/favicon-32x32.56ac6d7d4734859806f7..png">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif !important;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="draw" style="width: 67vw;height: 90vh;left:0.5vw;"></div><!-- size of graph-->
+    <div
+        style="width: 32vw;z-index: 101; position: absolute;top:-1vh;right:0px;background-color:rgba(124, 188, 149, 0.612);">
+        <canvas id="myChart1"></canvas>
+    </div>
+    <div
+        style="width: 32vw;z-index: 100; position: absolute;top:27vh;right:0px;background-color: rgba(146, 217, 172, 0.379);">
+        <canvas id="myChart2"></canvas>
+
+    </div>
+    <div
+        style="width: 32vw;z-index: 99; position: absolute;top:55vh;right:0px;background-color: rgba(146, 217, 172, 0.178);">
+        <canvas id="myChart3"></canvas>
+
+    </div>
+
+    <button id="incomers" type="button" class="btn btn-light" style="position: absolute;bottom:3vh;right:10px;"
+        onclick="incomers()">incomers</button>
+    <button id="outgoers" type="button" class="btn btn-light" style="position: absolute;bottom:3vh;right:120px;"
+        onclick="outgoers()">
+        outgoers</button>
+    <button id="refresh" type="button" class="btn btn-dark" onclick="randomize()"
+        style="position: absolute;bottom:3vh;right:240px;">randomize</button>
+
+    <button id="saveCanvas" type="button" class="btn btn-dark" style="position: absolute;bottom:3vh;left:10px;"
+        onclick="saveCanvas()">save</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+    <script src="./euro-table.js"></script>
+    <script src="./backgroundObject.js"></script>
+    <script src="./myColors.js"></script>
+    <script src="./style.js"></script>
+    <script src="./action.js"></script>
+    <script src="./setup.js"></script>
+    <script src="./config.js"></script>
+    <script src="./charts.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
